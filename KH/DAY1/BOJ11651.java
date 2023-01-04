@@ -3,10 +3,9 @@ package DAY1;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.StringTokenizer;
 import java.util.*;
 
-public class BOJ11650 {
+public class BOJ11651 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         List<Location> locationList = new ArrayList<>();
@@ -55,3 +54,10 @@ public class BOJ11650 {
         }
     }
 }
+
+
+/*
+https://www.acmicpc.net/problem/11651
+
+user defined Class 생성 후 Comparator interface 구현을 통해 x, y 좌표 따라 정렬
+ */
