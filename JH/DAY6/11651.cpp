@@ -14,9 +14,6 @@ bool comp(pair<int,int> a, pair<int,int> b){
     }else{
         return a.second<b.second;
     }
-
-
-
 }
 
 int main(){
