@@ -6,9 +6,3 @@ one = int(a+b)
 two = int(c+d)
 
 print(one+two)
-
-
-
-
-
-1020+3040
