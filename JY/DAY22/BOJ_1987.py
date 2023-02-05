@@ -7,8 +7,6 @@ table = []
 for _ in range(A):
     table.append(input().rstrip())
 
-    
-res = []
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 visited = [["" for _ in range(B)]  for _ in range(A)]
