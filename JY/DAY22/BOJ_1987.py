@@ -17,19 +17,18 @@ def bfs():
     global ans
     qu = deque()
     qu.append([0, 0, table[0][0]])
-    ans = 0
+    visited[0][0] = table[0][0]
     while qu:
         x, y, v = qu.popleft()
-        visited[x][y] = True
         for i in range(4):
             nx = x + dx[i]
             ny = y + dy[i]
             if 0 <= nx < A and 0 <= ny < B and table[nx][ny] not in v:
-                if visited[nx][ny] != v: #그냥 참거짓으로 하면 다시 돌아올 수 없다. -> 그냥 그동안 왔던 경로를 저장하자 
-                    visited[nx][ny] = v
+                if visited[nx][ny] != v+table[nx][ny]: #그냥 참거짓으로 하면 다시 돌아올 수 없다. -> 그냥 그동안 왔던 경로를 저장하자 
+                    visited[nx][ny] = v+table[nx][ny]
                     qu.append([nx, ny, v+table[nx][ny]])
-                    ans = max(len(v)+1, ans)
-    return ans
+                    
+    return len(v)
                 
 
 
