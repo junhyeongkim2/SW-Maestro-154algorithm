@@ -18,7 +18,7 @@ while (start <= end):
         if i > mid:  # 떡의 값이 중간점보다 크면
             total += (i - mid)  # 잘랐을 때의 떡의 합 = 떡 - 중간점
     if total < m:  # 잘랐을 때의 합이 고객이 원하는 것보다 작으면
-        end = mid - 1  # 중간점을 왼쪽으로 이동
+        end = mid - 1  # 끝점을 왼쪽으로 이동
 
     else:  # 잘랐을 때의 합이가 고객이 원하는 것보다 크면
         result = mid  # 일단 기록
