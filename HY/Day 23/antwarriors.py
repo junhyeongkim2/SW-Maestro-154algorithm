@@ -9,9 +9,9 @@ arr = list(map(int, input().split()))
 dp = [0] * 100
 
 #보텀업 진행
-
 dp[0] = arr[0]
 dp[1] = max(arr[0], arr[1])
+
 #dp[1]과 dp[0] + arr[2]의 합 중 더 큰 것을 dp[2]에 넣음
 for i in range(2, n):
     dp[i] = max(dp[i-1], dp[i-2]+ arr[i])
