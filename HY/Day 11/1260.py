@@ -1,4 +1,7 @@
 from collections import deque
+import sys
+input = sys.stdin.readline
+sys.setrecursionlimit(10 ** 8) #재귀 함수를 사용할 때 리미트를 걸어줘야함
 
 # 정점, 간선수, 시작점을 입력받음
 n, m, v = map(int, input().split())
@@ -15,10 +18,7 @@ for i in range(m):
 visited1 = [False] * (n+1)
 visited2 = [False] * (n+1)
 
-# dfs 알고리즘
-
-
-def dfs(v):
+def dfs(v): # dfs 알고리즘
  # 방문 처리
     visited1[v] = True
  # 방문 후, 정점 출력
@@ -29,13 +29,14 @@ def dfs(v):
           # 방문한다. 재귀함수 활용
            # 호출될 때마다 visted는 1이되고  재귀되어 v에 i가 들어간다
             dfs(i)
+
+
 # bfs 알고리즘
-
-
 def bfs(v):
  # 방문할 곳을 순서대로 넣을 큐
     q = deque([v])
- # 방문 처리
+    #방문처리 
+    visited2[v] = True
     # 큐 안에 데이터가 없을 때 까지 실행됨
     while q:
         # 큐 맨 앞에 있는 값을 꺼내서 출력한다
@@ -45,8 +46,7 @@ def bfs(v):
          # 방문기록이 없고, 인덱스에 값이 있다면(연결되어있다면)
             if not visited2[i] and graph[v][i] == 1:
                 q.append(i)  # 큐에 추가한다.
-                visited2[i] = True
-
+                visited2[i] = True #방문처리
 
 dfs(v)
 print()
