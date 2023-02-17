@@ -2,7 +2,6 @@ import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
 
-
 n, m = map(int, input().split())
 graph = [[i] for i in range(n+1)]
 for i in range(m):

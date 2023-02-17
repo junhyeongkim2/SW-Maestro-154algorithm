@@ -1,7 +1,11 @@
+"""
+DFS 섬의 개수 실버 2
+
+"""
+
 import sys
 input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8)
-
 
 def dfs(x, y):
     if x < 0 or y < 0 or y >= w or x >= h:  # 범위를 벗어나면 False 반환
@@ -20,14 +24,14 @@ def dfs(x, y):
         return True
     return False
 
-
 while True:
-    # 너비 w 높이 H
+    # 너비w 높이h
     w, h = map(int, input().split())
-    if w == 0 and h == 0:
+    if w == 0 and h == 0: #0이 입력되면 break
         break
+    #h까지  map 만들기 
     graph = []
-    for i in range(h):
+    for i in range(h): 
         graph.append(list(map(int, input().split())))
 
     result = 0
