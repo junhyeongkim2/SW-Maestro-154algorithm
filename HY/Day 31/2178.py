@@ -1,3 +1,11 @@
+"""
+미로찾기
+ 1은 이동할 수 있는 칸을 나타내고, 0은 이동할 수 없는 칸을 나타낸다. 
+ 이러한 미로가 주어졌을 때, (1, 1)에서 출발하여 (N, M)의 위치로 이동할 때 지나야 하는 최소의 칸 수를 구하는 프로그램을 작성하시오. 
+ 한 칸에서 다른 칸으로 이동할 때, 서로 인접한 칸으로만 이동할 수 있다.
+
+"""
+
 import sys
 from collections import deque
 input = sys.stdin.readline
@@ -20,7 +28,7 @@ def bfs():
         for i in range(4):
             nextX = x + dx[i] #다음으로 이동할 좌표들
             nextY = y + dy[i]
-
+            #범위를 벗어나면
             if nextX < 0 or nextY < 0 or nextX >= n or nextY >= m:
                 continue
             #노드가 0이라면 ★★★★★★★★★★★★★★★★★★★★★★★★
