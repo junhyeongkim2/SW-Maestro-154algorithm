@@ -3,7 +3,7 @@ package 프로그래머스_고득점_kit.DFS_BFS.타겟넘버;
 public class Solution {
     int answer = 0;
 
-    public int solution1(int[] numbers, int target) {
+    public int solution(int[] numbers, int target) {
         dfs(numbers, 0, target, 0);
 
         return answer;
@@ -16,10 +16,5 @@ public class Solution {
             dfs(numbers, depth + 1, target, sum + numbers[depth]);
             dfs(numbers, depth + 1, target, sum - numbers[depth]);
         }
-    }
-
-    public int solution2(int[] numbers, int target) {
-        int answer = 0;
-        return answer;
     }
 }
