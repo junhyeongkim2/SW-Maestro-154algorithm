@@ -1,3 +1,8 @@
+"""
+차이를 최대로
+순열 라이브러리 사용
+"""
+
 import sys
 from itertools import permutations
 # 주어진 배열 원소들의 모든 순열을 구한다.

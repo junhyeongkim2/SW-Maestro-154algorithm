@@ -8,14 +8,14 @@ dfs 알고리즘
 (3) 1~2를 반복하며, 방문 후, 카운트
 """
 import sys
-sys.stdin.readline
+input = sys.stdin.readline
 sys.setrecursionlimit(10 ** 8) #재귀 함수를 사용할 때 리미트를 걸어줘야함
 
 n,m = map(int,input().split())
 graph =[]
 
 for i in range(n):
-   graph.append(list(map(int,input())))
+   graph.append(list(map(int,input().strip())))
 
 def dfs(x,y):
     # 범위를 벗어나면 즉시 종료
