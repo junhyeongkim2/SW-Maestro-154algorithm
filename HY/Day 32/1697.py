@@ -1,5 +1,5 @@
 """
-숨바꼭질 1697
+숨바꼭질 1697 골드 4
 수빈이는 동생과 숨바꼭질을 하고 있다. 수빈이는 현재 점 N(0 ≤ N ≤ 100,000)에 있고, 
 동생은 점 K(0 ≤ K ≤ 100,000)에 있다. 
 만약, 수빈이의 위치가 X일 때 걷는다면 1초 후에 X-1 또는 X+1로 이동하게 된다. 
@@ -10,7 +10,6 @@
 최단시간을 구하는 문제 = 그래프 문제
 이동 방향은 X - 1, X + 1, 2 x X 로 총 3가지로 노드가 펼쳐진다
 """
-
 import sys
 from collections import deque
 input = sys.stdin.readline
@@ -25,11 +24,11 @@ def bfs(v):
         now = q.popleft()
         d = [now-1, now+1, now*2] #이동수
         if now == k:  # 동생 만나면
-            print(time[now])  # 걸린 시간 출력
+            print(time[now])  #정답 걸린 시간 출력
             break
-        for i in d:  # now가 5일 경우, 4,6,10
+        for i in d:  # now가 5일 경우, 4,6,10 // 가려는 위치가 0보다 크고 리미트보다 작으면서 방문하지 않았을 때
             if 0 <= i <= limit and time[i] == 0:
                 time[i] = time[now] + 1  # 지금까지 걸린 시간 +1
-                q.append(i) #큐에 넣기 q= deque([4,6,"10"])
+                q.append(i) #큐에 넣기 q=deque([4,6,"10"])
 
 bfs(n)
