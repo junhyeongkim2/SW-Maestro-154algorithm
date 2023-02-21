@@ -96,6 +96,31 @@ public class Solution {
     }
 }
 
+/**
+ * 1.
+ *  무조건 알파벳 순으로 추가하면 안됨.
+ *  a,b / b,a / b,c / a,c
+ *  모든 티켓 사용 불가.
+ *
+ *  모든 티켓을 사용하는 조건이 우선,
+ *  이후 알파벳 순으로 정렬해야함.
+ *
+ *  (참조)
+ *  https://school.programmers.co.kr/learn/courses/14743/lessons/118891
+ *
+ *
+ *  2.
+ *  comparTo Override 활용하는 방법 다시 확인.
+ *  (참조)
+ *  https://wjheo.tistory.com/entry/Java-%EC%A0%95%EB%A0%AC%EB%B0%A9%EB%B2%95-Collectionssort
+ *
+ *
+ *  3. List 안에 객체 사용하는게 더 편리한듯
+ *      - 이전에는 String[], int[] 등을 이용했음
+ *      - 객체 사용하면 String, int를 조합해서 사용 가능.
+ *      - 단, 객체 사용시, getter setter constructor 추가할 것(살짝 귀찮..)
+ */
+
 /*
 * 깔끔한 풀이 1
 import java.util.ArrayList;
