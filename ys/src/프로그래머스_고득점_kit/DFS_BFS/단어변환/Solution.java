@@ -14,7 +14,9 @@ public class Solution {
         while(!q.isEmpty()){
             String[] toCheck = q.poll();
             String check = toCheck[0];
-            int depth = Integer.valueOf(toCheck[1]);
+            //Integer.parseInt() -> int로 반환
+            //Integer.valueOf() -> Integer로 반환
+            int depth = Integer.parseInt(toCheck[1]);
 
             if(check.equals(target)){
                 answer = depth;
@@ -65,5 +67,10 @@ public class Solution {
         bfs(begin,target,words);
 
         return answer;
+    }
+
+    public static void main(String[] args) {
+        int a = new Solution().solution("hit", "cog", new String[]{"hot", "dot", "dog", "lot", "log", "cog"});
+        System.out.println(a);
     }
 }
