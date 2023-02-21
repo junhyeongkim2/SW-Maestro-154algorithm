@@ -105,6 +105,10 @@ public class Solution {
  *  모든 티켓을 사용하는 조건이 우선,
  *  이후 알파벳 순으로 정렬해야함.
  *
+ *  (참조)
+ *  https://school.programmers.co.kr/learn/courses/14743/lessons/118891
+ *
+ *
  *  2.
  *  comparTo Override 활용하는 방법 다시 확인.
  *  (참조)
