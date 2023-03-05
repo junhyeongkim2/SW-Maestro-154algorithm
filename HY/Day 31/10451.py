@@ -25,7 +25,7 @@ for _ in range(t):
 
     # 순열 개수 세기
     for i in range(1, n+1):
-        if not visited [i]:
+        if not visited[i]:
             dfs(i)
             answer += 1
     print(answer)

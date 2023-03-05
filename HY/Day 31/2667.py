@@ -11,7 +11,6 @@
 """
 #단지 출력하기 dfs
 import sys
-sys.stdin.readline
 sys.setrecursionlimit(10**8)
 input = sys.stdin.readline
 

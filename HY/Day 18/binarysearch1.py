@@ -14,6 +14,7 @@ while (start <= end):
     total = 0  # 잘랐을 때 떡의 양
     # 중간점
     mid = (start + end) // 2
+    
     for i in tteok:
         if i > mid:  # 떡의 값이 중간점보다 크면
             total += (i - mid)  # 잘랐을 때의 떡의 합 = 떡 - 중간점
